@@ -20,7 +20,7 @@ class CreateMessagesTable extends Migration
             $table->bigInteger('sender_id')->unsigned();
             $table->text('status');
             $table->timestamps();
-            $table->foreign('sender_id')->references('id')->on('users');
+            $table->foreign('sender_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', 'MessagesController@index')->name('home');
+Route::get('/', 'PagesController@index')->name('home');
+Route::get('/login', 'PagesController@login')->name('login');
+Route::get('/register', 'PagesController@register')->name('register');
+
+Route::post('/login', 'AuthController@authenticate');
